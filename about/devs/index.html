@@ -1,0 +1,836 @@
+<!DOCTYPE html><html lang="en" class="dark h-full"><head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About/Devs - StateFarm Client</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<script src="js/tailwind.js"></script>
+
+<link href="css/styles.css" rel="stylesheet">
+
+<!-- seo crap -->
+
+<meta name="description" content="StateFarm Client is a utility mod for Shell Shockers that enhances your gameplay experience with handy tools and overlays.">
+<meta name="keywords" content="StateFarm Client, Shell Shockers, FPS, mod, utility">
+<meta name="author" content="Hydroflame521">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:image" content="/assets/logo.png">
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-900">
+    
+
+<nav class="bg-gray-900 flex items-center px-6 py-4 shadow-md relative">
+    <div class="flex items-center space-x-4">
+        
+        <a href="/" class="hover:text-red-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/statefarm.svg" alt="Home" class="h-10 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-red-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Home
+            </span>
+        </a>
+        
+        <a href="/news" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/news.svg" alt="News" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                News
+            </span>
+        </a>
+        
+        <a href="/install" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/download.svg" alt="Install" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Install
+            </span>
+        </a>
+        
+
+    </div>
+
+    <ul class="ml-auto flex space-x-4 items-center">
+        
+        <a href="/discord" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/discord.svg" alt="Discord" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Discord
+            </span>
+        </a>
+        
+        <a href="/github" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/github.svg" alt="GitHub" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                GitHub
+            </span>
+        </a>
+        
+        <a href="/youtube" class="hover:text-red-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/youtube.svg" alt="YouTube" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-red-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                YouTube
+            </span>
+        </a>
+        
+
+
+        <button id="burgerBtn" class="ml-2 hover:text-indigo-400 group relative flex items-center">
+            <img src="images/menu.svg" alt="More" class="h-6 w-6 icon-white transition-filter" id="burgerIcon">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                More
+            </span>
+        </button>
+
+        <div id="burgerMenu" class="absolute top-full right-6 mt-2 w-64 bg-gray-800 rounded-lg shadow-lg z-50 hidden text-sm divide-y divide-gray-700">
+            
+            <div class="p-4">
+                <a href="/install" class="flex items-center gap-2 text-indigo-400 hover:underline
+                 " style="padding-bottom: 2px;">
+                    <img src="images/download.svg" class="h-5 w-5 icon-white">
+                    <span>Install</span>
+                </a>
+                
+            </div>
+            
+            <div class="p-4">
+                <a href="/about" class="flex items-center gap-2 text-indigo-400 hover:underline
+                 " style="padding-bottom: 2px;">
+                    <img src="images/info.svg" class="h-5 w-5 icon-white">
+                    <span>About</span>
+                </a>
+                
+                <ul class="ml-6 mt-2 space-y-1">
+                    
+                    <li>
+                        <a href="/about/devs" class="text-gray-300 hover:text-indigo-300 block
+                         pl-2 border-l-2 border-indigo-300" style="padding-bottom: 2px;">
+                            Meet the Devs
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/projects" class="text-gray-300 hover:text-indigo-300 block
+                         " style="padding-bottom: 2px;">
+                            Our Projects
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            
+        </div>
+
+</ul></nav>
+
+<script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const burgerMenu = document.getElementById('burgerMenu');
+    const burgerIcon = document.getElementById('burgerIcon');
+
+    let isOpen = false;
+
+    burgerBtn.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+
+        if (!isOpen) {
+            burgerIcon.classList.remove('burger-spin-reverse');
+
+            void burgerIcon.offsetWidth;
+            burgerIcon.classList.add('burger-spin');
+        } else {
+            burgerIcon.classList.remove('burger-spin');
+
+            void burgerIcon.offsetWidth;
+            burgerIcon.classList.add('burger-spin-reverse');
+        }
+
+        isOpen = !isOpen;
+    });
+
+    document.addEventListener('click', e => {
+        if (!burgerMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+            if (!burgerMenu.classList.contains('hidden')) {
+                burgerMenu.classList.add('hidden');
+
+                burgerIcon.classList.remove('burger-spin');
+                void burgerIcon.offsetWidth;
+                burgerIcon.classList.add('burger-spin-reverse');
+
+                isOpen = false;
+            }
+        }
+    });
+</script>
+
+    <main class="flex-grow text-gray-200 font-bahnschrift">
+        
+
+<div class="max-w-6xl mx-auto p-6 space-y-8 text-gray-200">
+    <h1 class="text-5xl font-extrabold tracking-tight text-center mb-8">Meet the Developers</h1>
+
+    <p class="text-lg text-center max-w-3xl mx-auto mb-10">
+        These are the people who have contributed to StateFarm Client, past and present.
+    </p>
+
+    <!-- <p class="text-sm text-center text-gray-400">
+        
+    </p> -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/hydro.png" alt="Hydroflame521's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">Hydroflame521</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka hydro, absolutist</p>
+                        
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">Founder of StateFarm Client. Handles most of the frontend and design work.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>StateFarm Client itself</li>
+                        
+                        <li>Adding Bahnschrift 😎</li>
+                        
+                        <li>21K Member Server</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Minecraft Anarchy</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                <a href="https://foenem.vip" title="Website" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/www.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://github.com/Hydroflame521" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://youtube.com/@Hydroflame521" title="YouTube" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/youtube.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@pvpr</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/onlypuppy7.png" alt="onlypuppy7's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">onlypuppy7</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka puppy, op7</p>
+                        
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">The stupid idiot who started most of this mess.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>Bulk of the client's code</li>
+                        
+                        <li>StateFarm AI Discord Bot</li>
+                        
+                        <li>Countless side projects</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <a href="https://github.com/onlypuppy7/nSMM" class="text-indigo-400 hover:underline">
+                                nSMM
+                            </a>
+                            
+                            
+                            <span class="text-xs text-gray-400">- Super Mario Maker on your calculator</span>
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                <a href="https://onlypuppy7.online" title="Website" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/www.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://github.com/onlypuppy7" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://youtube.com/@onlypuppy7" title="YouTube" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/youtube.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@onlypuppy7</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/hijinks.png" alt="hijinks ensue's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">hijinks ensue</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka hijinks, enbyte, porcupane</p>
+                        
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li></li>
+                        
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/enbyte" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@porcupane</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/seq.png" alt="Seq's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">Seq</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka seqsy</p>
+                        
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">professional cyber terrorist</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>Particle Speed Control</li>
+                        
+                        <li>Apollo</li>
+                        
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                <a href="https://seqsy.de" title="Website" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/www.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://github.com/TheRealSeq" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://www.youtube.com/@GhosthunterZero" title="YouTube" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/youtube.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@5eqy</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/neuublue.png" alt="de_Neuublue's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">de_Neuublue</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka neuublue</p>
+                        
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">Provides the exact solution to every problem you have, courtesy of old Crackware code.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>Silent Aim</li>
+                        
+                        <li>Smoothing Modes</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Roblox</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/neuublue" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@de_neuublue</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/notfood.png" alt="Not Food's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">Not Food</h2>
+                        
+                        
+                        <p class="text-xs text-red-400 italic">Inactive</p>
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">The most important person in the room, when he is in the room.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>Line of Sight</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Real life</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/N0TFOOD" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <a href="https://www.youtube.com/@evilshockers" title="YouTube" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/youtube.svg" class="h-4 w-4">
+                </a>
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@not._.food</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/oakswingzzz.png" alt="OakSwingZZZ's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">OakSwingZZZ</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka GoatSwingZZZ</p>
+                        
+                        
+                        <p class="text-xs text-red-400 italic">Inactive</p>
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300"></p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>SFC Chat Bridge</li>
+                        
+                        <li>Config Support</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Real life</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/OakSwingZZZ" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@oakswingzzz</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/port.png" alt="Port's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">Port</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka Oister, Doeshotter</p>
+                        
+                        
+                        <p class="text-xs text-red-400 italic">Inactive</p>
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">Eggstapo for a while, now lost to the void.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>Moderation</li>
+                        
+                        <li>README Editing</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Real life</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/portending" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@captainie</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/doescolder.png" alt="doescolder's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">doescolder</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka ??</p>
+                        
+                        
+                        <p class="text-xs text-red-400 italic">Inactive</p>
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">Senior botter.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>doescolder doescolder doescolder</li>
+                        
+                        <li>doescolder doescolder doescolder</li>
+                        
+                        <li>doescolder doescolder doescolder</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Z</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/deathlyhate" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+            </div>
+            
+        </div>
+
+        
+        <div class="bg-gray-800 rounded-lg p-4 space-y-2 text-sm flex flex-col justify-between">
+            <div>
+                <div class="flex items-start space-x-3">
+                    <img src="images/susdung.png" alt="susdung's PFP" class="h-12 w-12 rounded-full border border-gray-600">
+                    <div class="flex-1">
+                        <h2 class="text-base font-semibold leading-tight">susdung</h2>
+                        
+                        <p class="text-xs text-gray-400 italic">aka fuddung</p>
+                        
+                        
+                        <p class="text-xs text-red-400 italic">Inactive</p>
+                        
+                        <p class="mt-1 text-sm leading-snug text-gray-300">Senior README editor.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Contributions</h3>
+                    <ul class="list-disc list-inside text-gray-300 space-y-0.5">
+                        
+                        <li>README Editing</li>
+                        
+                    </ul>
+                </div>
+
+                
+                <div>
+                    <h3 class="text-sm font-semibold mt-2 mb-1 text-white">Side Projects</h3>
+                    <ul class="space-y-0.5">
+                        
+                        <li>
+                            
+                            <span>Real life</span>
+                            
+                            
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+
+            
+            <div class="flex items-center space-x-3 mt-2">
+                
+                
+                <a href="https://github.com/Fuddung" title="GitHub" class="hover:text-indigo-400" style="filter: invert(1);">
+                    <img src="images/github.svg" class="h-4 w-4">
+                </a>
+                
+                
+                
+                <span class="flex items-center space-x-2 bg-gray-900 text-white rounded-full px-2 py-1 text-xs font-medium">
+                    <img src="images/discord.svg" class="h-4 w-4" style="filter: invert(1);" alt="Discord">
+                    <span>@susdung</span>
+                </span>
+                
+            </div>
+            
+        </div>
+
+        
+    </div>
+
+    <div class="flex items-start bg-yellow-900/40 border border-yellow-700 text-yellow-200 rounded p-4 mt-10">
+        <img src="images/warning.svg" class="h-6 w-6 mr-3" style="filter: invert(1);" alt="Caution">
+        <p class="text-sm leading-relaxed">
+            Other people who claim to own, run, maintain, or have contributed to StateFarm Client not listed here are
+            lying and likely will try to install malware on your computer. If you see anyone claiming to be the owner of
+            StateFarm Client, please report them to the StateFarm Client team on our <a href="/discord" class="underline text-indigo-400">official Discord</a>.
+        </p>
+    </div>
+</div>
+    </main>
+
+    <footer class="bg-gray-900 text-sm py-4 mt-8">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+    <p>� 2025 StateFarm Client, 651f848</p>
+    <p class="mt-2 sm:mt-0">Made with hatred by the StateFarm Client Team</p>
+  </div>
+  <!-- This website is not affiliated with Blue Wizard Digital, or any of its . -->
+    <p class="text-center text-gray-500 mt-2">This website is not affiliated with Blue Wizard Digital, or any of its problems.</p>
+</footer>
+
+
+</body></html>

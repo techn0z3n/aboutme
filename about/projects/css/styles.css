@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("../fonts/0a6ee448d1bd65c56f6cf256a7c6f20a.eot");
+  src: url("../fonts/0a6ee448d1bd65c56f6cf256a7c6f20a.eot#iefix")
+      format("embedded-opentype"),
+    url("../fonts/0a6ee448d1bd65c56f6cf256a7c6f20a.woff2")
+      format("woff2"),
+    url("../fonts/0a6ee448d1bd65c56f6cf256a7c6f20a.woff")
+      format("woff"),
+    url("../fonts/0a6ee448d1bd65c56f6cf256a7c6f20a.ttf")
+      format("truetype"),
+    url("../images/0a6ee448d1bd65c56f6cf256a7c6f20a.svg#Bahnschrift")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Bahnschrift", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #1a202c; /* gray-900 */
+  color: #e5e7eb; /* gray-200 */
+  margin: 0;
+  min-height: 100vh;
+}
+
+.icon-indigo {
+  filter: invert(42%) sepia(94%) saturate(2545%) hue-rotate(222deg)
+    brightness(97%) contrast(94%);
+}
+
+.icon-white {
+  filter: invert(100%);
+}
+
+a.hover\:text-indigo-400:hover .icon-white {
+  filter: invert(42%) sepia(94%) saturate(2545%) hue-rotate(222deg)
+    brightness(97%) contrast(94%);
+}
+
+a.hover\:text-red-400:hover .icon-white {
+  filter: invert(24%) sepia(92%) saturate(7468%) hue-rotate(356deg)
+    brightness(95%) contrast(101%);
+}
+
+a.hover\:text-orange-400:hover .icon-white {
+  filter: invert(47%) sepia(72%) saturate(3368%) hue-rotate(15deg)
+    brightness(98%) contrast(95%);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d3748; /* gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a5568; /* gray-700 */
+  border-radius: 8px;
+  border: 3px solid #2d3748; /* match track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #718096; /* gray-600 */
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a5568 #2d3748;
+}
+
+@keyframes spin90 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+.burger-spin {
+  animation: spin90 0.3s forwards;
+}
+
+.burger-spin-reverse {
+  animation: spin90 0.3s reverse forwards;
+}

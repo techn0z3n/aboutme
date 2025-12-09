@@ -1,0 +1,1000 @@
+<!DOCTYPE html><html lang="en" class="dark h-full"><head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About/Projects - StateFarm Client</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+
+<script src="js/tailwind.js"></script>
+
+<link href="css/styles.css" rel="stylesheet">
+
+<!-- seo crap -->
+
+<meta name="description" content="StateFarm Client is a utility mod for Shell Shockers that enhances your gameplay experience with handy tools and overlays.">
+<meta name="keywords" content="StateFarm Client, Shell Shockers, FPS, mod, utility">
+<meta name="author" content="Hydroflame521">
+<meta property="og:image" content="images/logo.png">
+<meta name="twitter:image" content="/assets/logo.png">
+</head>
+
+<body class="min-h-screen flex flex-col bg-gray-900">
+    
+
+<nav class="bg-gray-900 flex items-center px-6 py-4 shadow-md relative">
+    <div class="flex items-center space-x-4">
+        
+        <a href="/" class="hover:text-red-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/statefarm.svg" alt="Home" class="h-10 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-red-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Home
+            </span>
+        </a>
+        
+        <a href="/news" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/news.svg" alt="News" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                News
+            </span>
+        </a>
+        
+        <a href="/install" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/download.svg" alt="Install" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Install
+            </span>
+        </a>
+        
+
+    </div>
+
+    <ul class="ml-auto flex space-x-4 items-center">
+        
+        <a href="/discord" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/discord.svg" alt="Discord" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                Discord
+            </span>
+        </a>
+        
+        <a href="/github" class="hover:text-indigo-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/github.svg" alt="GitHub" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                GitHub
+            </span>
+        </a>
+        
+        <a href="/youtube" class="hover:text-red-400 group relative flex items-center
+                " style="padding-bottom: 2px;">
+            <img src="images/youtube.svg" alt="YouTube" class="h-6 w-6 icon-white transition-filter">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-red-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                YouTube
+            </span>
+        </a>
+        
+
+
+        <button id="burgerBtn" class="ml-2 hover:text-indigo-400 group relative flex items-center">
+            <img src="images/menu.svg" alt="More" class="h-6 w-6 icon-white transition-filter" id="burgerIcon">
+            <span class="absolute top-full mt-1 left-1/2 -translate-x-1/2 transform text-xs px-2 py-1 bg-gray-800 text-indigo-400 rounded opacity-0 group-hover:opacity-100 transition pointer-events-none whitespace-nowrap">
+                More
+            </span>
+        </button>
+
+        <div id="burgerMenu" class="absolute top-full right-6 mt-2 w-64 bg-gray-800 rounded-lg shadow-lg z-50 hidden text-sm divide-y divide-gray-700">
+            
+            <div class="p-4">
+                <a href="/install" class="flex items-center gap-2 text-indigo-400 hover:underline
+                 " style="padding-bottom: 2px;">
+                    <img src="images/download.svg" class="h-5 w-5 icon-white">
+                    <span>Install</span>
+                </a>
+                
+            </div>
+            
+            <div class="p-4">
+                <a href="/about" class="flex items-center gap-2 text-indigo-400 hover:underline
+                 " style="padding-bottom: 2px;">
+                    <img src="images/info.svg" class="h-5 w-5 icon-white">
+                    <span>About</span>
+                </a>
+                
+                <ul class="ml-6 mt-2 space-y-1">
+                    
+                    <li>
+                        <a href="/about/devs" class="text-gray-300 hover:text-indigo-300 block
+                         " style="padding-bottom: 2px;">
+                            Meet the Devs
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="/about/projects" class="text-gray-300 hover:text-indigo-300 block
+                         pl-2 border-l-2 border-indigo-300" style="padding-bottom: 2px;">
+                            Our Projects
+                        </a>
+                    </li>
+                    
+                </ul>
+                
+            </div>
+            
+        </div>
+
+</ul></nav>
+
+<script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const burgerMenu = document.getElementById('burgerMenu');
+    const burgerIcon = document.getElementById('burgerIcon');
+
+    let isOpen = false;
+
+    burgerBtn.addEventListener('click', () => {
+        burgerMenu.classList.toggle('hidden');
+
+        if (!isOpen) {
+            burgerIcon.classList.remove('burger-spin-reverse');
+
+            void burgerIcon.offsetWidth;
+            burgerIcon.classList.add('burger-spin');
+        } else {
+            burgerIcon.classList.remove('burger-spin');
+
+            void burgerIcon.offsetWidth;
+            burgerIcon.classList.add('burger-spin-reverse');
+        }
+
+        isOpen = !isOpen;
+    });
+
+    document.addEventListener('click', e => {
+        if (!burgerMenu.contains(e.target) && !burgerBtn.contains(e.target)) {
+            if (!burgerMenu.classList.contains('hidden')) {
+                burgerMenu.classList.add('hidden');
+
+                burgerIcon.classList.remove('burger-spin');
+                void burgerIcon.offsetWidth;
+                burgerIcon.classList.add('burger-spin-reverse');
+
+                isOpen = false;
+            }
+        }
+    });
+</script>
+
+    <main class="flex-grow text-gray-200 font-bahnschrift">
+        
+
+<div class="max-w-6xl mx-auto p-6 space-y-10 text-white font-bahnschrift">
+    <section class="text-center space-y-4">
+        <h1 class="text-5xl font-extrabold tracking-tight">Projects</h1>
+        <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            Explore the various projects created by the StateFarm Client team and contributors. From fully functional
+            clients to experimental scripts, some are good and some are bad, but all are interesting in their
+            own way.
+        </p>
+        <p class="text-sm text-gray-500">
+            Note: Some projects are private or abandoned, and may not be available for public use.
+        </p>
+    </section>
+
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/statefarm.svg" alt="StateFarm Client Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm Client</h2>
+                    
+                    <span class="text-sm text-gray-400">by Hydroflame521, enbyte, notfood, 1ust, OakSwingZZZ, Seq and de_Neuublue</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">The main client mod for Shell Shockers.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="/gitlab" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="/install" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/code.svg" alt="VarData Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">VarData</h2>
+                    
+                    <span class="text-sm text-gray-400">by the StateFarm Client team</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Easily importable variable keys for Shell Shockers, used by StateFarm Client and other projects.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="github.com/StateFarmNetwork/client-keys" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/yolk.svg" alt="LegacyShell Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">LegacyShell</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7, Seq</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is currently offline or unreachable.">
+                        
+                        ⬇️ Offline
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Fully functional reverse engineering of the Shell Shockers backend, formerly hosted on legacyshell.com - powerful and expandable with plugins.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                    <!-- use /icons/discord.svg instead of text -->
+                <a href="https://dsc.gg/legacyshell" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition flex items-center space-x-2">
+                    <img src="images/discord.svg" class="h-5 w-5" style="filter: invert(100%);">
+                
+                
+                </a><a href="https://github.com/onlypuppy7/LegacyShell" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+                <a href="https://legacyshell.com" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Website</a>
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/security.svg" alt="OnlyGuard7000 Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">OnlyGuard7000</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7 for LegacyShell</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A plugin for LegacyShell which implements anti-injection measures and serverside anticheat such as anti-ESP. Proves it can be done!</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/OnlyGuard7000" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/gecko.svg" alt="Geico Client Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Geico Client</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7 for LegacyShell</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project has not been released yet.">
+                        
+                        ⏳ Unreleased
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A proof-of-concept aimbot and ESP for LegacyShell to test OnlyGuard7000's effectiveness.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/GeicoClient" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/bolt.svg" alt="Hyperion Toolkit Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Hyperion Toolkit</h2>
+                    
+                    <span class="text-sm text-gray-400">by hijinks ensue</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Fast, multithreaded, antibot-bypassing item farmer for Shell Shockers. Unfortunately written in JavaScript.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/enbyte/HyperionToolkit" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/streamproof.svg" alt="Sloppyproof Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Sloppyproof</h2>
+                    
+                    <span class="text-sm text-gray-400">by hijinks ensue</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">5514 Streamproof ESP skid updated for the latest Shell versions. TDStuart the goat because two of the injection methods are entirely from him.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/seq.svg" alt="Himmelsfeuer Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Himmelsfeuer</h2>
+                    
+                    <span class="text-sm text-gray-400">by Seq</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Easy, non-skid full Streamproof ESP.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/www.svg" alt="StateFarm Website Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm Website</h2>
+                    
+                    <span class="text-sm text-gray-400">by the StateFarm Client team</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">The official website for the StateFarm Client project, where you are right now!</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                
+                
+                <a href="/" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Website</a>
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/menu.svg" alt="Server Dropdown Restorer Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Server Dropdown Restorer</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A simple script created by onlypuppy7 to re-implement the server dropdown on the title screen. Created to avoid the gatekeeping of the original.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/ShellShockersServerDropdownRestorer/" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="https://greasyfork.org/en/scripts/527873-shell-shockers-server-dropdown-restorer" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/barclays.svg" alt="Barclays Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Barclays</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project has been abandoned.">
+                        
+                        ❌ Abandoned
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Library created by onlypuppy7 to inject models into Shell Shockers, now abandoned.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/BarclaysShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="https://greasyfork.org/en/scripts/526219-shell-shockers-model-injector-barclay-s" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/allstate.svg" alt="Allstate Client Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Allstate Client</h2>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Private console-run, league-proof aim assist.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/libertymutual.svg" alt="LibertyMutual Client Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">LibertyMutual Client</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A stripped-down, proof of concept Shell script, focused on performance and minimalism, now private.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/LibertyMutualShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="https://greasyfork.org/en/scripts/484168-shell-shockers-basic-aimbot-esp-libertymutualv1" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/statefarm.svg" alt="ShellFarm Client Icon" class="h-10 w-10 rotate-180" style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">ShellFarm Client</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project has been abandoned.">
+                        
+                        ❌ Abandoned
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A failed experiment to make a legit version of SFC. Abandoned due to lack of interest.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/ShellFarmClientShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="https://greasyfork.org/en/scripts/485745-shellfarm-v2-utilities-for-shell-shockers" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/hsbc.svg" alt="HSBC: FPS Unlocker Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">HSBC: FPS Unlocker</h2>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Private console-run FPS unlocker. Private because I was commissioned to make this.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/HSBCShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/lloyds.svg" alt="Lloyds Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Lloyds</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is unfinished and may not be fully functional.">
+                        
+                        🏗️ Unfinished
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">WIP silent injector.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/LloydsShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/discord.svg" alt="StateFarm AI Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm AI</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Our Discord bot that provides helpful and unhelpful commands, as well as generating the VarData that powers our projects.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/statefarm_bot" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/discord.svg" alt="AbsoUtils Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">AbsoUtils</h2>
+                    
+                    <span class="text-sm text-gray-400">by Hydroflame521</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Custom Discord moderation bot for the FWU family of servers.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/Hydroflame522/AbsoUtils/" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/chat.svg" alt="StateFarm Chat Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm Chat</h2>
+                    
+                    <span class="text-sm text-gray-400">by OakSwingZZZ</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">A barebones chat bridge allowing users of StateFarm Client to chat with others globally and on Discord.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/OakSwingZZZ/StateFarmClientChat/" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/bot.svg" alt="StateFarm Bot Toolkit Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm Bot Toolkit</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is outdated and may not work properly.">
+                        
+                        🕰️ Outdated
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">The original toolkit made by onlypuppy7 to experiment with botting Chicken Winner in Shell.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/StateFarmBotToolkit" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/crackedegg.svg" alt="StateFarm CW Turbo Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">StateFarm CW Turbo</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is outdated and may not work properly.">
+                        
+                        🕰️ Outdated
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">The userscript precursor to the StateFarm Bot Toolkit.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/StateFarmCWTurbo" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/crackedshield.svg" alt="ConsoleCracker Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">ConsoleCracker</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project has been abandoned.">
+                        
+                        ❌ Abandoned
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-green-500" title="This project is public and accessible.">Public</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Exposes most Shell Shockers variables usually hidden by the extern IIF.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/ConsoleCrackerShellShockers" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                <a href="https://greasyfork.org/en/scripts/509876-consolecracker-variable-exposer-for-shell-shockers" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded font-semibold transition">Install</a>
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/album.svg" alt="Shell Shockers Stamps Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">Shell Shockers Stamps</h2>
+                    
+                    <span class="text-sm text-gray-400">by onlypuppy7</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is outdated and may not work properly.">
+                        
+                        🕰️ Outdated
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">Just a repo that contains stamps for Shell Shockers.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                <a href="https://github.com/onlypuppy7/ShellShockersStamps" target="_blank" class="bg-gray-700 hover:bg-indigo-600 text-white text-sm px-4 py-2 rounded font-semibold transition">Code</a>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="bg-gray-800 border border-gray-700 rounded-lg p-5 flex flex-col space-y-4 hover:border-indigo-500 transition">
+            <div class="flex items-center space-x-4">
+                <img src="images/discord.svg" alt="sq hunter Icon" class="h-10 w-10 " style="filter: invert(1);">
+                <div>
+                    <h2 class="text-xl font-semibold">sq hunter</h2>
+                    
+                    <span class="text-sm text-gray-400">by Seq</span><br>
+                    
+                    <span class="text-sm text-gray-400" title="This project is working.">
+                        
+                        ✅ Working
+                        
+                    </span>
+                    >
+                    <!-- private? -->
+                    
+                    <span class="text-sm text-red-500" title="This project is private and not publicly accessible.">Private</span>
+                    
+                </div>
+            </div>
+
+            <p class="text-gray-300 flex-1">The #2 Discord floodbot, based on fm hunter.</p>
+
+            <div class="flex space-x-3 mt-auto">
+                
+                
+                
+                
+            </div>
+        </div>
+        
+    </section>
+</div>
+    </main>
+
+    <footer class="bg-gray-900 text-sm py-4 mt-8">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
+    <p>� 2025 StateFarm Client, 651f848</p>
+    <p class="mt-2 sm:mt-0">Made with hatred by the StateFarm Client Team</p>
+  </div>
+  <!-- This website is not affiliated with Blue Wizard Digital, or any of its . -->
+    <p class="text-center text-gray-500 mt-2">This website is not affiliated with Blue Wizard Digital, or any of its problems.</p>
+</footer>
+
+
+</body></html>
